@@ -23,6 +23,18 @@
 </div>
 <input type="text" id="email">
 
+
+
+<form id="test-form">
+    <input type="text" name="test">
+    <button type="button" onclick="doSubmitForm()">Submit</button>
+</form>
+
+
+<form id="test-form1" onsubmit="return checkForm()">
+    <input type="text" name="test">
+    <button type="submit">Submit</button>
+</form>
 <script>
 
     var js = document.getElementById('js'),
@@ -70,6 +82,19 @@
 
     input.value = 'test@example.com';
 
+
+
+    function doSubmitForm() {
+        var form = document.getElementById('test-form');
+
+        form.submit();
+    }
+
+    function checkForm() {
+        var form = document.getElementById('test-form');
+
+        return true;
+    }
 </script>
 
 <ol id="test-list">
