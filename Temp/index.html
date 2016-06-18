@@ -21,7 +21,7 @@
     <p id="python">Python</p>
     <p id="scheme">Scheme</p>
 </div>
-
+<input type="text" id="email">
 
 <script>
 
@@ -44,6 +44,8 @@
     d.innerHTML = 'p {color : red}';
     document.getElementsByTagName('head')[0].appendChild(d);
 
+
+    //当你遍历一个父节点的子节点并进行删除操作时，要注意，children属性是一个只读属性，并且它在子节点变化时会实时更新。
     var
             i,c,
             list = document.getElementById('list');
@@ -51,15 +53,22 @@
         c = list.children[i]; //拿到第i个
     }
 
-    var self = document.getElementById('to-be-removed');
+//    var self = document.getElementById('to-be-removed');
+//
+//    var parent = self.parentElement;
+//
+//    var removed = parent.removeChild(self);
+//
+//    if (removed === self) {
+//        console.log('xxx');
+//    }
 
-    var parent = self.parentElement;
 
-    var removed = parent.removeChild(self);
+    var input = document.getElementById('email');
+    console.log(input.value);
 
-    if (removed === self) {
-        console.log('xxx');
-    }
+
+    input.value = 'test@example.com';
 
 </script>
 
@@ -74,7 +83,23 @@
 
 
 
+<ul id="test-list1">
+    <li>JavaScript</li>
+    <li>Swift</li>
+    <li>HTML</li>
+    <li>ANSI</li>
+    <li>CSS</li>
+    <li>DirectX</li>
+</ul>
 
+
+
+<input type="date" value="2015-07-01">
+<input type="datetime-local" value="2015-07-01T02:03:04">
+<input type="color" value="#ff0000">
+
+<label><input type="radio" name="weekday" id="monday" value="1">Moneday</label>
+<label><input type="radio" name="weekday" id="tuesday" value="2">Tuesday</label>
 
 
 
